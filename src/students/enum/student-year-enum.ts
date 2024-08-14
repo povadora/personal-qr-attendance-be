@@ -6,8 +6,7 @@ export enum yearLevel {
 }
 
 export enum block {
-  FIRSTYEAR = 'First Year',
-  SECONDYEAR = 'Second Year',
-  THIRDYEAR = 'Third Year',
-  FOURTHYEAR = 'Fourth Year',
+  BlOCKA = 'Block A',
+  BLOCKB = 'Block B',
+  BLOCKC = 'Block C',
 }

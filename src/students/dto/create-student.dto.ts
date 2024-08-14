@@ -1,10 +1,7 @@
-import { IsNotEmpty, IsOptional, IsString } from 'class-validator';
+import { IsEnum, IsNotEmpty, IsOptional, IsString } from 'class-validator';
+import { block, yearLevel } from '../enum/student-year-enum';
 
 export class CreateStudentDto {
-  @IsOptional()
-  @IsString()
-  studentPhoto: string | null;
-
   @IsNotEmpty()
   @IsString()
   firstName: string;
@@ -17,7 +14,9 @@ export class CreateStudentDto {
   @IsString()
   age: string | null;
 
-  @IsOptional()
-  @IsString()
-  year: string | null;
+  @IsEnum(yearLevel)
+  yearLevel: yearLevel;
+
+  @IsEnum(block)
+  block: block;
 }
