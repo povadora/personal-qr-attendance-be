@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  development_db:
+    image: mariadb
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: attendance_db
+      MYSQL_USER: qr-attendance
+      MYSQL_PASSWORD: qr-attendance123
+    ports:
+      - '3306:3306'
